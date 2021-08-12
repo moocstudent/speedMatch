@@ -36,6 +36,8 @@
     <div class="center-block" style="text-align:center;width: 300px;height: 20px;background-color: yellow"
          id="continual"></div>
     <div class="center-block" style="text-align:center;width: 300px;height: 20px;background-color: yellow"
+         id="level"></div>
+    <div class="center-block" style="text-align:center;width: 300px;height: 20px;background-color: yellow"
          id="score"></div>
     <div class="box" id="cardBox">
     <div class="cardModule" style="width: 200px;height: 200px;" id="gone"></div>
@@ -48,6 +50,7 @@
     var goneNode = document.getElementById("gone");
 
     var continualNode = document.getElementById("continual");
+    var levelNode = document.getElementById("level");
     var scoreNode = document.getElementById("score");
 
     //初始化今日牌堆
@@ -111,8 +114,9 @@
         }
         //分数基数50
         allScore += scoreLevel*baseScore*scoreFlag;
-        continualNode.innerText=continualNb
-        scoreNode.innerText=allScore
+        continualNode.innerText="连续答对数量:"+continualNb
+        scoreNode.innerText="全部分数:"+allScore
+        levelNode.innerText="分数等级:"+scoreLevel
         console.log("continualNb:"+continualNb)
         console.log("scoreLevel:"+scoreLevel)
 
